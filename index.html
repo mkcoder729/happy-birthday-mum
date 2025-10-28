@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Mum! 🌸 The Most Incredible Woman in the Universe</title>
+    <title>Happy Birthday Mum! 🌸 The Most Incredible Woman</title>
     <meta name="description" content="A beautiful birthday tribute to the most amazing mother in the world">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -505,6 +505,7 @@
     .mobile-menu.active .mobile-nav-link:nth-child(3) { animation-delay: 0.2s; }
     .mobile-menu.active .mobile-nav-link:nth-child(4) { animation-delay: 0.25s; }
     .mobile-menu.active .mobile-nav-link:nth-child(5) { animation-delay: 0.3s; }
+    .mobile-menu.active .mobile-nav-link:nth-child(6) { animation-delay: 0.35s; }
 
     /* ===== PERFECTED HERO SECTION ===== */
     .hero {
@@ -984,6 +985,129 @@
         margin-top: var(--space-lg);
     }
 
+    /* ===== COMPACT BIRTHDAY WISHES SECTION ===== */
+    .wishes-section {
+        background: var(--section-pattern);
+        padding: var(--space-xl) 0;
+    }
+
+    .wishes-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: var(--space-lg);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--medium-gray);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .wishes-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--gradient-primary);
+    }
+
+    .wishes-form {
+        display: grid;
+        gap: var(--space-md);
+        margin-top: var(--space-md);
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .form-input, .form-select, .form-textarea {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 2px solid var(--medium-gray);
+        border-radius: var(--radius-md);
+        font-size: 0.9rem;
+        transition: all 0.3s var(--ease-out-cubic);
+        background: var(--white);
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-dark);
+    }
+
+    .form-select {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%234A5568' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 10px;
+    }
+
+    .form-textarea {
+        resize: vertical;
+        min-height: 100px;
+        line-height: 1.5;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(255,107,139,0.1);
+        transform: translateY(-1px);
+    }
+
+    .form-input::placeholder, .form-textarea::placeholder {
+        color: var(--text-lighter);
+        transition: color 0.3s var(--ease-out-cubic);
+    }
+
+    .form-input:focus::placeholder, .form-textarea:focus::placeholder {
+        color: transparent;
+    }
+
+    .submit-btn {
+        background: var(--gradient-primary);
+        color: var(--white);
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: var(--radius-lg);
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s var(--ease-out-cubic);
+        box-shadow: var(--shadow-md);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    /* Success message styling */
+    .success-message {
+        background: var(--white);
+        padding: var(--space-lg);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-xxl);
+        text-align: center;
+    }
+
+    .success-icon {
+        font-size: var(--text-3xl);
+        color: var(--secondary);
+        margin-bottom: var(--space-sm);
+    }
     /* ===== PERFECTED SUCCESS MESSAGE ===== */
     .success-message {
         position: fixed;
@@ -1092,6 +1216,108 @@
     .audio-control:hover {
         transform: scale(1.1);
         box-shadow: var(--shadow-xl);
+    }
+
+    /* ===== BEAUTIFUL FOOTER ===== */
+    .footer {
+        background: var(--gradient-dark);
+        color: var(--white);
+        padding: var(--space-xxl) 0 var(--space-xl);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+            radial-gradient(circle at 20% 80%, rgba(255,107,139,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(78,205,196,0.1) 0%, transparent 50%);
+    }
+
+    .footer-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #FF6B8B 0%, #4ECDC4 50%, #FFD166 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: var(--space-lg);
+    }
+
+    .footer-text {
+        font-size: var(--text-lg);
+        color: rgba(255,255,255,0.8);
+        margin-bottom: var(--space-xl);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-lg);
+        margin-bottom: var(--space-xl);
+        flex-wrap: wrap;
+    }
+
+    .footer-link {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .footer-link:hover {
+        color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-xl);
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+        border-radius: var(--radius-full);
+        background: rgba(255,255,255,0.1);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+    }
+
+    .social-link:hover {
+        background: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(255,107,139,0.3);
+    }
+
+    .copyright {
+        color: rgba(255,255,255,0.6);
+        font-size: var(--text-sm);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: var(--space-lg);
+        margin-top: var(--space-lg);
     }
 
     /* ===== LOADING SCREEN ===== */
@@ -1315,6 +1541,11 @@
             gap: var(--space-md);
         }
 
+        .wishes-container {
+            padding: var(--space-lg);
+            margin: 0 var(--space-sm);
+        }
+
         .message-card {
             padding: var(--space-lg);
         }
@@ -1346,6 +1577,21 @@
         .back-to-top {
             bottom: var(--space-md);
             left: calc(var(--space-md) + 60px);
+        }
+
+        .footer-links {
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .social-links {
+            gap: var(--space-sm);
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            font-size: 1.1rem;
         }
     }
 
@@ -1379,6 +1625,14 @@
 
         .about-image {
             height: 500px;
+        }
+
+        .footer {
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
         }
     }
 
@@ -1516,6 +1770,7 @@
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#memories" class="nav-link">Memories</a></li>
                 <li><a href="#message" class="nav-link">Message</a></li>
+                <li><a href="#wishes" class="nav-link">Send Wishes</a></li>
             </ul>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -1531,6 +1786,7 @@
             <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
             <li><a href="#memories" class="mobile-nav-link">Memories</a></li>
             <li><a href="#message" class="mobile-nav-link">Message</a></li>
+            <li><a href="#wishes" class="mobile-nav-link">Send Wishes</a></li>
         </ul>
     </div>
 
@@ -1705,6 +1961,104 @@
         </div>
     </section>
 
+    <!-- Birthday Wishes Section -->
+    <section id="wishes" class="section wishes-section">
+        <div class="container">
+            <h2 class="text-center animate-fade-in-up">Send Birthday Wishes 💝</h2>
+            <p class="text-center" style="font-size: var(--text-lg); color: var(--text-light); margin-bottom: var(--space-lg);">
+                Share your love and birthday messages directly to her!
+            </p>
+            <div class="wishes-container animate-fade-in-up">
+                <!-- ✅ WORKING FORMSUBMIT INTEGRATION -->
+                <form class="wishes-form" id="birthdayWishForm" action="https://formsubmit.co/lemanuel7neuro@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Birthday Wish for Mum! 🎂">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="#wishes">
+
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-select" id="relationship" name="relationship" required>
+                            <option value="" disabled selected>Your Relationship</option>
+                            <option value="Child">Child</option>
+                            <option value="Cousin">Cousin</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Dad">Dad🌟</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-textarea" id="message" name="message" placeholder="Your heartfelt birthday message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Birthday Wish
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Mum's Special Day</div>
+                <p class="footer-text">
+                    A celebration of the most incredible woman in our lives.
+                    Thank you for being the heart of our family and the light in our world.
+                </p>
+
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About Mum</a>
+                    <a href="#gallery" class="footer-link">Gallery</a>
+                    <a href="#memories" class="footer-link">Memories</a>
+                    <a href="#message" class="footer-link">Message</a>
+                    <a href="#wishes" class="footer-link">Send Wishes</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Share on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/254721578134" class="social-link" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="social-link" title="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:phelistuswafula@gmail.com" class="social-link" title="Share via Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    Made with 💝 by Your Lovely Emmanuel | ©2025 Mum's Birthday Celebration
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Message -->
+    <div class="overlay" id="successOverlay"></div>
+    <div class="success-message" id="successMessage">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Message Sent Successfully! 🎉</h3>
+        <p>Your beautiful birthday wish has been delivered! Mum is going to love it!</p>
+        <button class="submit-btn" onclick="closeSuccessMessage()" style="margin-top: var(--space-lg);">
+            <i class="fas fa-smile"></i> Wonderful!
+        </button>
+    </div>
+
     <!-- Interactive Elements -->
     <div class="interactive-elements">
         <button class="floating-btn" onclick="createHearts()" title="Send Love">
@@ -1750,6 +2104,7 @@
             initializeCelebrationSystem();
             initializeMobileMenu();
             initializeAudioSystem();
+            initializeWishesForm();
 
             // Add performance monitoring
             initializePerformanceMonitor();
@@ -1806,6 +2161,32 @@
 
             document.addEventListener('click', enableAudio, { once: true });
             document.addEventListener('touchstart', enableAudio, { once: true });
+        }
+
+        // ===== WISHES FORM SYSTEM =====
+        function initializeWishesForm() {
+            const form = document.getElementById('birthdayWishForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            form.addEventListener('submit', function(e) {
+                // Show loading state
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+
+                // Let Formspree handle the submission
+                // We'll show success message after a short delay
+                setTimeout(() => {
+                    showSuccessMessage();
+
+                    // Reset form
+                    form.reset();
+
+                    // Restore button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
         }
 
         // ===== LOADING SCREEN SYSTEM =====
@@ -2509,6 +2890,27 @@
             }).catch(() => {
                 alert('📱 Share this special website with your loved ones!');
             });
+        }
+
+        // ===== SUCCESS MESSAGE SYSTEM =====
+        function showSuccessMessage() {
+            const overlay = document.getElementById('successOverlay');
+            const successMessage = document.getElementById('successMessage');
+
+            overlay.classList.add('active');
+            successMessage.classList.add('active');
+
+            // Add celebration effects
+            createHearts();
+            showConfetti();
+        }
+
+        function closeSuccessMessage() {
+            const overlay = document.getElementById('successOverlay');
+            const successMessage = document.getElementById('successMessage');
+
+            overlay.classList.remove('active');
+            successMessage.classList.remove('active');
         }
 
         // ===== UTILITY FUNCTIONS =====
