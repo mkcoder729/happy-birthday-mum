@@ -505,7 +505,6 @@
     .mobile-menu.active .mobile-nav-link:nth-child(3) { animation-delay: 0.2s; }
     .mobile-menu.active .mobile-nav-link:nth-child(4) { animation-delay: 0.25s; }
     .mobile-menu.active .mobile-nav-link:nth-child(5) { animation-delay: 0.3s; }
-    .mobile-menu.active .mobile-nav-link:nth-child(6) { animation-delay: 0.35s; }
 
     /* ===== PERFECTED HERO SECTION ===== */
     .hero {
@@ -680,7 +679,6 @@
         grid-template-columns: 1fr 1fr;
         gap: var(--space-xl);
         align-items: center;
-        color:var(--purple);
     }
 
     .about-image {
@@ -690,7 +688,7 @@
         box-shadow: var(--shadow-lg);
         transition: all 0.4s var(--ease-out-cubic);
         width: 100%;
-        height: 900px; /* Made taller as requested */
+        height: 900px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -719,7 +717,7 @@
     }
 
     .about-text {
-        font-size: 0.95rem; /* Slightly smaller font as requested */
+        font-size: 0.95rem;
         color: var(--text-light);
         margin-bottom: var(--space-lg);
         line-height: 1.7;
@@ -734,13 +732,13 @@
 
     .quality-item {
         background: var(--white);
-        padding: var(--space-md); /* Smaller padding for smaller cards */
+        padding: var(--space-md);
         border-radius: var(--radius-lg);
         box-shadow: var(--shadow-md);
         text-align: center;
         transition: all 0.3s var(--ease-out-cubic);
         border: 1px solid var(--medium-gray);
-        transform: scale(0.95); /* Made cards smaller as requested */
+        transform: scale(0.95);
     }
 
     .quality-item:hover {
@@ -750,7 +748,7 @@
     }
 
     .quality-icon {
-        font-size: var(--text-2xl); /* Smaller icons for smaller cards */
+        font-size: var(--text-2xl);
         margin-bottom: var(--space-sm);
         background: var(--gradient-primary);
         -webkit-background-clip: text;
@@ -765,94 +763,93 @@
         60% { transform: translateY(-4px); }
     }
 
-/* ===== PERFECTED GALLERY SECTION ===== */
-.gallery-section {
-    background: var(--gradient-light);
-}
+    /* ===== PERFECTED GALLERY SECTION ===== */
+    .gallery-section {
+        background: var(--gradient-light);
+    }
 
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--space-lg);
-    margin-top: var(--space-xl);
-}
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-lg);
+        margin-top: var(--space-xl);
+    }
 
-.gallery-item {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    transition: all 0.3s var(--ease-out-cubic);
-    width: 350px;
-    height: 360px;
-    cursor: pointer;
-    margin: 0 auto;
-}
+    .gallery-item {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s var(--ease-out-cubic);
+        width: 350px;
+        height: 360px;
+        cursor: pointer;
+        margin: 0 auto;
+    }
 
-.gallery-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-}
+    .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+    }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s var(--ease-out-cubic);
-}
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s var(--ease-out-cubic);
+    }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
 
-.gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
-    color: var(--white);
-    padding: var(--space-xl);
-    transform: translateY(100%);
-    transition: all 0.4s var(--ease-out-cubic);
-    z-index: 2;
-    height: 60%; /* Covers bottom 60% of image with fade */
-}
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+        color: var(--white);
+        padding: var(--space-xl);
+        transform: translateY(100%);
+        transition: all 0.4s var(--ease-out-cubic);
+        z-index: 2;
+        height: 60%;
+    }
 
-.gallery-item:hover .gallery-overlay {
-    transform: translateY(0);
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
-}
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
+    }
 
-/* Make text more visible */
-.gallery-overlay h3 {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    margin-bottom: var(--space-sm);
-    color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    letter-spacing: 0.5px;
-    transform: translateY(20px);
-    transition: transform 0.3s var(--ease-out-cubic);
-    opacity: 0;
-}
+    .gallery-overlay h3 {
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        margin-bottom: var(--space-sm);
+        color: #FFFFFF;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        letter-spacing: 0.5px;
+        transform: translateY(20px);
+        transition: transform 0.3s var(--ease-out-cubic);
+        opacity: 0;
+    }
 
-.gallery-overlay p {
-    font-size: var(--text-lg);
-    font-weight: 500;
-    color: #FFD166;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
-    line-height: 1.5;
-    transform: translateY(20px);
-    transition: transform 0.3s var(--ease-out-cubic) 0.1s;
-    opacity: 0;
-}
+    .gallery-overlay p {
+        font-size: var(--text-lg);
+        font-weight: 500;
+        color: #FFD166;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+        line-height: 1.5;
+        transform: translateY(20px);
+        transition: transform 0.3s var(--ease-out-cubic) 0.1s;
+        opacity: 0;
+    }
 
-.gallery-item:hover .gallery-overlay h3,
-.gallery-item:hover .gallery-overlay p {
-    transform: translateY(0);
-    opacity: 1;
-}
+    .gallery-item:hover .gallery-overlay h3,
+    .gallery-item:hover .gallery-overlay p {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
     /* ===== PERFECTED MEMORIES TIMELINE ===== */
     .memories-timeline {
@@ -985,99 +982,6 @@
         font-size: var(--text-3xl);
         color: var(--primary);
         margin-top: var(--space-lg);
-    }
-
-    /* ===== PERFECTED CONTACT SECTION ===== */
-    .contact-section {
-        background: var(--section-pattern);
-    }
-
-    .contact-container {
-        max-width: 600px;
-        margin: 0 auto;
-        background: var(--white);
-        padding: var(--space-xl);
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-lg);
-        border: 1px solid var(--medium-gray);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .contact-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--gradient-primary);
-    }
-
-    .contact-form {
-        display: grid;
-        gap: var(--space-md);
-        margin-top: var(--space-lg);
-    }
-
-    .form-group {
-        position: relative;
-    }
-
-    .form-input {
-        width: 100%;
-        padding: var(--space-md);
-        border: 2px solid var(--medium-gray);
-        border-radius: var(--radius-md);
-        font-size: var(--text-base);
-        transition: all 0.3s var(--ease-out-cubic);
-        background: var(--white);
-        font-family: 'Poppins', sans-serif;
-        color: var(--text-dark);
-    }
-
-    .form-input:focus {
-        outline: none;
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(255,107,139,0.1);
-        transform: translateY(-1px);
-    }
-
-    .form-input::placeholder {
-        color: var(--text-lighter);
-        transition: color 0.3s var(--ease-out-cubic);
-    }
-
-    .form-input:focus::placeholder {
-        color: transparent;
-    }
-
-    .textarea {
-        resize: vertical;
-        min-height: 120px;
-        line-height: 1.5;
-    }
-
-    .submit-btn {
-        background: var(--gradient-primary);
-        color: var(--white);
-        border: none;
-        padding: var(--space-md) var(--space-lg);
-        border-radius: var(--radius-lg);
-        font-size: var(--text-base);
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s var(--ease-out-cubic);
-        box-shadow: var(--shadow-md);
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-sm);
-        justify-content: center;
-    }
-
-    .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-lg);
     }
 
     /* ===== PERFECTED SUCCESS MESSAGE ===== */
@@ -1411,11 +1315,6 @@
             gap: var(--space-md);
         }
 
-        .contact-container {
-            padding: var(--space-lg);
-            margin: 0 var(--space-sm);
-        }
-
         .message-card {
             padding: var(--space-lg);
         }
@@ -1470,6 +1369,16 @@
 
         .success-message {
             padding: var(--space-lg);
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 300px;
+            max-width: 350px;
+        }
+
+        .about-image {
+            height: 500px;
         }
     }
 
@@ -1607,10 +1516,23 @@
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#memories" class="nav-link">Memories</a></li>
                 <li><a href="#message" class="nav-link">Message</a></li>
-                <li><a href="#contact" class="nav-link">Send Wishes</a></li>
             </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About Mum</a></li>
+            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+            <li><a href="#memories" class="mobile-nav-link">Memories</a></li>
+            <li><a href="#message" class="mobile-nav-link">Message</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -1783,57 +1705,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h2 class="text-center animate-fade-in-up">Send Birthday Wishes to Mum</h2>
-            <p class="text-center" style="font-size: var(--text-xl); color: var(--text-light); margin-bottom: var(--space-xl);">
-                Share your love and birthday messages that will be delivered directly to her!
-            </p>
-            <div class="contact-container animate-fade-in-up">
-                <form class="contact-form" id="birthdayWishForm" action="https://formsubmit.co/lemanuel7neuro@gmail.com" method="POST">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_subject" value="New Birthday Wish for Mum! 🎂">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-group">
-                        <input type="text" class="form-input" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" class="form-input" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="tel" class="form-input" id="phone" name="phone" placeholder="Phone Number (Optional)">
-                    </div>
-
-                    <div class="form-group">
-                        <textarea class="form-input textarea" id="message1" name="message" placeholder="Your Heartfelt Birthday Message" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Birthday Wish
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Message -->
-    <div class="overlay" id="successOverlay"></div>
-    <div class="success-message" id="successMessage">
-        <div class="success-icon">
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <h3>Message Sent Successfully! 🎉</h3>
-        <p>Your beautiful birthday wish has been delivered to Mum! She's going to love it!</p>
-        <button class="submit-btn" onclick="closeSuccessMessage()" style="margin-top: var(--space-lg);">
-            <i class="fas fa-smile"></i> Wonderful!
-        </button>
-    </div>
-
     <!-- Interactive Elements -->
     <div class="interactive-elements">
         <button class="floating-btn" onclick="createHearts()" title="Send Love">
@@ -1849,6 +1720,7 @@
             <i class="fas fa-share-alt"></i>
         </button>
     </div>
+
     <script>
         // ===== COMPREHENSIVE JAVASCRIPT MASTERPIECE =====
 
@@ -1857,8 +1729,7 @@
             isCelebrating: false,
             musicPlaying: false,
             particlesActive: false,
-            currentAnimation: null,
-            formSubmissions: []
+            currentAnimation: null
         };
 
         // DOM Content Loaded - Initialize everything
@@ -1872,7 +1743,6 @@
             initializeScrollEffects();
             initializeNavigation();
             initializeAnimations();
-            initializeContactForm();
             initializeProgressBar();
             initializeBackToTop();
             initializeTimeline();
@@ -1892,19 +1762,9 @@
             const audio = document.getElementById('backgroundMusic');
             const audioControl = document.getElementById('audioControl');
 
-            // Try to play audio automatically after user interaction
-            document.addEventListener('click', function initAudio() {
-                if (!state.musicPlaying) {
-                    audio.play().then(() => {
-                        state.musicPlaying = true;
-                        audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
-                        console.log('🎵 Background music started');
-                    }).catch(error => {
-                        console.log('Audio play failed:', error);
-                    });
-                }
-                document.removeEventListener('click', initAudio);
-            }, { once: true });
+            // Set initial state
+            state.musicPlaying = false;
+            audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
 
             // Audio control button
             audioControl.addEventListener('click', function() {
@@ -1916,6 +1776,10 @@
                     audio.play().then(() => {
                         state.musicPlaying = true;
                         audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    }).catch(error => {
+                        console.log('Audio play failed:', error);
+                        // Show user instruction
+                        alert('Please click anywhere on the page first to enable audio, then click the music button again.');
                     });
                 }
             });
@@ -1923,8 +1787,25 @@
             // Handle audio errors
             audio.addEventListener('error', function(e) {
                 console.error('Audio error:', e);
-                audioControl.style.display = 'none'; // Hide control if audio fails
+                audioControl.style.display = 'none';
             });
+
+            // Enable audio on first user interaction
+            function enableAudio() {
+                document.removeEventListener('click', enableAudio);
+                document.removeEventListener('touchstart', enableAudio);
+
+                // Try to play audio
+                audio.play().then(() => {
+                    state.musicPlaying = true;
+                    audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    audio.pause(); // Pause immediately, user will start with button
+                    state.musicPlaying = false;
+                }).catch(console.error);
+            }
+
+            document.addEventListener('click', enableAudio, { once: true });
+            document.addEventListener('touchstart', enableAudio, { once: true });
         }
 
         // ===== LOADING SCREEN SYSTEM =====
@@ -1950,8 +1831,8 @@
             }
 
             // 5-second loading progress
-            const totalTime = 5000; // 5 seconds
-            const intervalTime = 50; // Update every 50ms
+            const totalTime = 5000;
+            const intervalTime = 50;
             const totalSteps = totalTime / intervalTime;
             let currentStep = 0;
 
@@ -1963,7 +1844,6 @@
                     progress = 100;
                     clearInterval(loadingInterval);
 
-                    // Show 100% for a moment before exiting
                     setTimeout(() => {
                         loadingScreen.classList.add('loading-complete');
                         setTimeout(() => {
@@ -1973,7 +1853,6 @@
                     }, 500);
                 }
 
-                // Update progress bar and percentage
                 loadingProgress.style.width = progress + '%';
                 percentage.textContent = Math.floor(progress) + '%';
             }, intervalTime);
@@ -1981,33 +1860,13 @@
 
         // ===== MOBILE MENU SYSTEM =====
         function initializeMobileMenu() {
-            const mobileMenuBtn = document.createElement('button');
-            mobileMenuBtn.className = 'mobile-menu-btn';
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-
-            const mobileMenu = document.createElement('div');
-            mobileMenu.className = 'mobile-menu';
-
-            // Clone desktop nav links for mobile
-            const desktopLinks = document.querySelector('.nav-links');
-            const mobileNavLinks = document.createElement('ul');
-            mobileNavLinks.className = 'mobile-nav-links';
-
-            // Copy links to mobile menu
-            desktopLinks.querySelectorAll('.nav-link').forEach(link => {
-                const mobileLink = link.cloneNode(true);
-                mobileLink.className = 'mobile-nav-link';
-                mobileNavLinks.appendChild(mobileLink);
-            });
-
-            mobileMenu.appendChild(mobileNavLinks);
-
-            // Add to DOM
-            document.querySelector('.nav-container').appendChild(mobileMenuBtn);
-            document.querySelector('.navbar').appendChild(mobileMenu);
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
             // Toggle mobile menu
-            mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
                 mobileMenu.classList.toggle('active');
                 this.innerHTML = mobileMenu.classList.contains('active')
                     ? '<i class="fas fa-times"></i>'
@@ -2015,13 +1874,12 @@
             });
 
             // Close mobile menu when clicking on a link
-            mobileMenu.addEventListener('click', function(e) {
-                if (e.target.classList.contains('mobile-nav-link')) {
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     mobileMenu.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
 
-                    // Smooth scroll to section
-                    const targetId = e.target.getAttribute('href');
+                    const targetId = this.getAttribute('href');
                     const targetSection = document.querySelector(targetId);
                     if (targetSection) {
                         const offsetTop = targetSection.offsetTop - 80;
@@ -2030,7 +1888,7 @@
                             behavior: 'smooth'
                         });
                     }
-                }
+                });
             });
 
             // Close mobile menu when clicking outside
@@ -2047,7 +1905,6 @@
             const container = document.getElementById('floatingElements');
             const elements = ['🌸', '🎀', '💝', '🎉', '🎁', '🌟', '💖', '✨', '🥳', '🎈', '🎊', '🎂', '💐', '🌺', '🌷'];
 
-            // Create 25 floating elements with advanced properties
             for (let i = 0; i < 25; i++) {
                 createFloatingElement(container, elements, i);
             }
@@ -2066,17 +1923,6 @@
             element.style.zIndex = Math.floor(Math.random() * 10);
             element.style.filter = `hue-rotate(${Math.random() * 360}deg) brightness(${Math.random() * 0.3 + 0.7})`;
 
-            // Add interactive behavior
-            element.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.3) rotate(180deg)';
-                this.style.transition = 'all 0.3s var(--ease-out-back)';
-            });
-
-            element.addEventListener('mouseleave', function() {
-                this.style.transform = '';
-                this.style.transition = 'all 0.6s var(--ease-out-cubic)';
-            });
-
             container.appendChild(element);
         }
 
@@ -2085,7 +1931,6 @@
             const container = document.getElementById('particles');
             const colors = ['#FF6B8B', '#4ECDC4', '#FFD166', '#FF9FF3', '#A78BFA', '#FF8E53'];
 
-            // Create 100 particles with advanced properties
             for (let i = 0; i < 100; i++) {
                 createParticle(container, colors, i);
             }
@@ -2107,7 +1952,6 @@
             particle.style.opacity = Math.random() * 0.8 + 0.2;
             particle.style.boxShadow = `0 0 ${size}px ${colors[Math.floor(Math.random() * colors.length)]}`;
 
-            // Add blur effect for some particles
             if (Math.random() > 0.7) {
                 particle.style.filter = `blur(${Math.random() * 3}px)`;
             }
@@ -2124,23 +1968,18 @@
             let ticking = false;
 
             function updateScroll() {
-                // Navbar effect
                 if (window.scrollY > 100) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
 
-                // Progress bar
                 const windowHeight = window.innerHeight;
                 const documentHeight = document.documentElement.scrollHeight - windowHeight;
                 const scrollPercentage = (window.scrollY / documentHeight) * 100;
                 progressBar.style.width = scrollPercentage + '%';
 
-                // Parallax effects
                 updateParallaxEffects();
-
-                // Update active navigation link
                 updateActiveNavLink();
 
                 lastScrollY = window.scrollY;
@@ -2172,7 +2011,36 @@
         // ===== NAVIGATION SYSTEM =====
         function initializeNavigation() {
             const navLinks = document.querySelectorAll('.nav-link');
-            const navbar = document.getElementById('navbar');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function updateActiveNavLink() {
+                const sections = document.querySelectorAll('section');
+                const scrollPos = window.scrollY + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                        // Update desktop nav
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+
+                        // Update mobile nav
+                        mobileNavLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
 
             // Smooth scrolling for navigation links
             navLinks.forEach(link => {
@@ -2190,38 +2058,36 @@
                             behavior: 'smooth'
                         });
 
-                        // Update active state
                         navLinks.forEach(l => l.classList.remove('active'));
                         this.classList.add('active');
                     }
                 });
             });
 
-            // Update active link on scroll
-            function updateActiveNavLink() {
-                const sections = document.querySelectorAll('section');
-                const scrollPos = window.scrollY + 100;
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
 
-                    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${sectionId}`) {
-                                link.classList.add('active');
-                            }
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
                         });
+
+                        mobileNavLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
                     }
                 });
-            }
+            });
         }
 
         // ===== ANIMATION SYSTEM =====
         function initializeAnimations() {
-            // Intersection Observer for scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -2232,7 +2098,6 @@
                     if (entry.isIntersecting) {
                         entry.target.style.animationPlayState = 'running';
 
-                        // Add visible class for timeline items
                         if (entry.target.classList.contains('timeline-item')) {
                             entry.target.classList.add('visible');
                         }
@@ -2242,136 +2107,15 @@
                 });
             }, observerOptions);
 
-            // Observe all animated elements
             document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right, .timeline-item').forEach(el => {
                 el.style.animationPlayState = 'paused';
                 observer.observe(el);
             });
         }
 
-        // ===== CONTACT FORM SYSTEM =====
-        function initializeContactForm() {
-            const form = document.getElementById('birthdayWishForm');
-            const inputs = form.querySelectorAll('.form-input');
-
-            // Add focus/blur effects
-            inputs.forEach(input => {
-                input.addEventListener('focus', function() {
-                    this.parentElement.classList.add('focused');
-                });
-
-                input.addEventListener('blur', function() {
-                    if (!this.value) {
-                        this.parentElement.classList.remove('focused');
-                    }
-                });
-            });
-
-            // Form submission - REMOVED preventDefault to allow FormSubmit to work
-            form.addEventListener('submit', function(e) {
-                // Get form data for validation
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    message: document.getElementById('message1').value,
-                    timestamp: new Date().toISOString(),
-                    id: generateId()
-                };
-
-                // Validate form
-                if (!validateForm(formData)) {
-                    e.preventDefault(); // Only prevent if validation fails
-                    return;
-                }
-
-                // If validation passes, let FormSubmit handle the submission
-                // Show loading state
-                const submitBtn = document.querySelector('.submit-btn');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-
-                // Store submission locally
-                state.formSubmissions.push(formData);
-
-                // Show success message
-                showSuccessMessage();
-
-                // Reset form after a delay
-                setTimeout(() => {
-                    document.getElementById('birthdayWishForm').reset();
-                }, 1000);
-
-                // Restore button after a delay
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }, 3000);
-
-                // Log submission
-                console.log('Birthday wish submitted to FormSubmit:', formData);
-            });
-        }
-
-        function validateForm(data) {
-            if (!data.name.trim()) {
-                showError('Please enter your name');
-                return false;
-            }
-
-            if (!data.email.trim() || !isValidEmail(data.email)) {
-                showError('Please enter a valid email address');
-                return false;
-            }
-
-            if (!data.message.trim()) {
-                showError('Please enter your birthday message');
-                return false;
-            }
-
-            return true;
-        }
-
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        function showError(message) {
-            // Create error notification
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'error-message';
-            errorDiv.textContent = message;
-            errorDiv.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: #FF6B8B;
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 8px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                z-index: 10005;
-                animation: slideInRight 0.3s ease-out;
-            `;
-
-            document.body.appendChild(errorDiv);
-
-            // Remove after 3 seconds
-            setTimeout(() => {
-                errorDiv.style.animation = 'slideOutRight 0.3s ease-out';
-                setTimeout(() => {
-                    if (errorDiv.parentNode) {
-                        document.body.removeChild(errorDiv);
-                    }
-                }, 300);
-            }, 3000);
-        }
-
         // ===== PROGRESS BAR SYSTEM =====
         function initializeProgressBar() {
-            // Already handled in scroll effects
+            // Handled in scroll effects
         }
 
         // ===== BACK TO TOP SYSTEM =====
@@ -2396,7 +2140,7 @@
 
         // ===== TIMELINE SYSTEM =====
         function initializeTimeline() {
-            // Already handled in animations
+            // Handled in animations
         }
 
         // ===== GALLERY SYSTEM =====
@@ -2405,7 +2149,6 @@
 
             galleryItems.forEach(item => {
                 item.addEventListener('click', function() {
-                    // Create lightbox view
                     createLightbox(this);
                 });
             });
@@ -2416,7 +2159,6 @@
             const title = galleryItem.querySelector('h3').textContent;
             const description = galleryItem.querySelector('p').textContent;
 
-            // Create lightbox overlay
             const lightbox = document.createElement('div');
             lightbox.className = 'lightbox-overlay';
             lightbox.style.cssText = `
@@ -2434,7 +2176,6 @@
                 transition: opacity 0.3s ease;
             `;
 
-            // Lightbox content
             lightbox.innerHTML = `
                 <div class="lightbox-content" style="
                     background: white;
@@ -2470,13 +2211,11 @@
 
             document.body.appendChild(lightbox);
 
-            // Animate in
             setTimeout(() => {
                 lightbox.style.opacity = '1';
                 lightbox.querySelector('.lightbox-content').style.transform = 'scale(1)';
             }, 10);
 
-            // Close functionality
             const closeBtn = lightbox.querySelector('.lightbox-close');
             closeBtn.addEventListener('click', () => {
                 lightbox.style.opacity = '0';
@@ -2507,7 +2246,6 @@
 
             state.isCelebrating = true;
 
-            // Start all celebration effects
             createHearts();
             showConfetti();
             playMusic();
@@ -2515,7 +2253,6 @@
             showFireworks();
             startParticleExplosion();
 
-            // Celebration sequence
             const celebrationSequence = [
                 { action: 'createHearts', delay: 0 },
                 { action: 'showConfetti', delay: 500 },
@@ -2530,7 +2267,6 @@
                 }, delay);
             });
 
-            // Reset celebration state after 10 seconds
             setTimeout(() => {
                 state.isCelebrating = false;
             }, 10000);
@@ -2659,7 +2395,6 @@
                 particle.style.animation = 'particleExplode 2s ease-out forwards';
             });
 
-            // Add explosion animation
             if (!document.getElementById('explosionAnimation')) {
                 const style = document.createElement('style');
                 style.id = 'explosionAnimation';
@@ -2706,42 +2441,49 @@
         }
 
         function playMusic() {
-            if (state.musicPlaying) return;
+            const audio = document.getElementById('backgroundMusic');
+            const audioControl = document.getElementById('audioControl');
 
-            state.musicPlaying = true;
+            if (state.musicPlaying) {
+                audio.pause();
+                state.musicPlaying = false;
+                audioControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            } else {
+                audio.play().then(() => {
+                    state.musicPlaying = true;
+                    audioControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                }).catch(error => {
+                    console.log('Audio play failed:', error);
+                    const musicNotification = document.createElement('div');
+                    musicNotification.innerHTML = '🎵 Click anywhere first to enable audio! 🎵';
+                    musicNotification.style.cssText = `
+                        position: fixed;
+                        top: 100px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: var(--gradient-primary);
+                        color: white;
+                        padding: 1rem 2rem;
+                        border-radius: 50px;
+                        box-shadow: var(--shadow-xl);
+                        z-index: 10008;
+                        animation: slideInDown 0.5s ease-out;
+                        font-weight: 600;
+                        text-align: center;
+                        max-width: 90%;
+                    `;
+                    document.body.appendChild(musicNotification);
 
-            // In a real implementation, you would use the Web Audio API
-            // For now, we'll show a notification
-            const musicNotification = document.createElement('div');
-            musicNotification.innerHTML = '🎵 Birthday Music Playing! 🎵';
-            musicNotification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: var(--gradient-primary);
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 50px;
-                box-shadow: var(--shadow-xl);
-                z-index: 10008;
-                animation: slideInDown 0.5s ease-out;
-                font-weight: 600;
-            `;
-
-            document.body.appendChild(musicNotification);
-
-            setTimeout(() => {
-                musicNotification.style.animation = 'slideOutUp 0.5s ease-out';
-                setTimeout(() => {
-                    if (musicNotification.parentNode) {
-                        document.body.removeChild(musicNotification);
-                    }
-                }, 500);
-            }, 3000);
-
-            // Simulate music playback
-            console.log('🎶 Playing birthday music...');
+                    setTimeout(() => {
+                        musicNotification.style.animation = 'slideOutUp 0.5s ease-out';
+                        setTimeout(() => {
+                            if (musicNotification.parentNode) {
+                                document.body.removeChild(musicNotification);
+                            }
+                        }, 500);
+                    }, 3000);
+                });
+            }
         }
 
         function shareWebsite() {
@@ -2762,7 +2504,6 @@
         }
 
         function fallbackShare() {
-            // Copy URL to clipboard
             navigator.clipboard.writeText(window.location.href).then(() => {
                 alert('📋 Website URL copied to clipboard! Share it with family and friends!');
             }).catch(() => {
@@ -2770,39 +2511,12 @@
             });
         }
 
-        // ===== SUCCESS MESSAGE SYSTEM =====
-        function showSuccessMessage() {
-            const overlay = document.getElementById('successOverlay');
-            const successMessage = document.getElementById('successMessage');
-
-            overlay.classList.add('active');
-            successMessage.classList.add('active');
-
-            // Add celebration effects
-            createHearts();
-            showConfetti();
-        }
-
-        function closeSuccessMessage() {
-            const overlay = document.getElementById('successOverlay');
-            const successMessage = document.getElementById('successMessage');
-
-            overlay.classList.remove('active');
-            successMessage.classList.remove('active');
-        }
-
         // ===== UTILITY FUNCTIONS =====
-        function generateId() {
-            return Date.now().toString(36) + Math.random().toString(36).substr(2);
-        }
-
         function startBackgroundAnimations() {
-            // Start any background animations that should run continuously
             console.log('🎨 Starting background animations...');
         }
 
         function initializePerformanceMonitor() {
-            // Monitor frame rate
             let frameCount = 0;
             let lastTime = performance.now();
             let fps = 60;
@@ -2816,7 +2530,6 @@
                     frameCount = 0;
                     lastTime = currentTime;
 
-                    // Log FPS if it drops below 50
                     if (fps < 50) {
                         console.warn(`⚠️ Performance warning: FPS dropped to ${fps}`);
                     }
@@ -2846,16 +2559,6 @@
                     0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(255,209,102,0.7); }
                     50% { transform: scale(3); opacity: 0.5; box-shadow: 0 0 0 30px rgba(255,209,102,0.3); }
                     100% { transform: scale(5); opacity: 0; box-shadow: 0 0 0 60px rgba(255,209,102,0); }
-                }
-
-                @keyframes slideInRight {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-
-                @keyframes slideOutRight {
-                    from { transform: translateX(0); opacity: 1; }
-                    to { transform: translateX(100%); opacity: 0; }
                 }
 
                 @keyframes slideInDown {
